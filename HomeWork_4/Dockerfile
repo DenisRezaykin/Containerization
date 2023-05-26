@@ -1,5 +1,4 @@
-FROM ubuntu:latest
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install python3 -y
-RUN apt-get install python3-pip -y
-RUN pip3 install numpy pandas
+FROM alpine:latest
+FROM python:3
+ADD task4.py /
+CMD [ "python", "./task4.py" ]
